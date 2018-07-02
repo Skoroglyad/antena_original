@@ -1,0 +1,400 @@
+/* ------------------------- Start Media Query -------------------------------------- */
+
+/* X Small & Small Screen */
+@media(min-width: 100px) and (max-width: 991px) {
+    
+    .quote {
+        font-size: 18px;
+    }
+
+    /********* Start Navbar *******/
+    
+    .nav {
+        height: 70px;
+    }
+    
+    .nav .nav-toggle-btn {
+        right: 10px;
+    }
+    
+    .nav h3 {
+        position: absolute;
+        right: 0;
+        font-size: 25px;
+        top: -5px;
+        border: 2px solid #424243;
+        padding: 3px 8px;
+        border-radius: 3px;
+    }
+    
+    .nav .logo {
+        position: static;
+        display: block;
+        margin: auto;
+    }
+    
+    .nav .left-nav span {
+        font-size: 40px;
+    }
+    
+    .nav .left-nav {
+        left: 2%;
+        top: 11px;
+        font-size: 13px;
+    }
+    
+    .nav .left-nav a {
+        padding-right: 6px;
+    }
+    
+    .nav .menu ul {
+        text-align: center;
+    }
+    
+    .nav .menu ul li a {
+        font-size: 17px;
+    }
+    
+    .nav .menu input[type="search"] {
+            width: 170px;
+            font-size: 15px;
+    }
+    
+    /********* Start Header *******/
+    
+    .header .info {
+        padding-top: calc( (100vh /2) - 90px );
+    }
+    
+    .header .info h1 {
+        font-size: 40px;
+    }
+    
+    .header .info p {
+        margin: auto 10%;
+        font-size: 12px;
+    }
+    
+    .header .info a {
+        margin-top: 30px;
+        font-size: 13px;
+        padding: 8px 18px;
+    }
+    
+    .header .col-xs-12 {
+        margin-top: 35px;
+    }
+    
+    .header a i {
+        left: 46vw;
+    }
+    
+    .header a i.one {
+        bottom: 32px;
+    }
+    
+    .header a i.two {
+        bottom: 20px;
+    }
+    
+    .header a i.three {
+        bottom: 9px;
+    }
+    
+    /********* Start About *******/
+    
+    .about {
+        height: auto;
+    }
+    
+    .about .bg-about {
+        display: none;
+    }
+    
+    .about .info h2 {
+        margin-top: 60px;
+    }
+    
+    .about .info p {
+        text-align: center;
+        margin: 9px 0;
+    }
+    
+    .about .info a {
+        padding: 8px 15px;
+        margin-bottom: 40px;
+        display: block;
+        width: 136px;
+        height: auto;
+        margin: 40px auto;
+    }
+    
+    /********* Start Services *******/
+    
+    .serv .title h2 {
+        margin-top: 20px;
+    }
+    
+    .serv .title p {
+        font-size: 14px;
+        margin: 29px auto 70px;
+    }
+    
+    .serv .info img {
+        width: 93px;
+        margin-bottom: 4px;
+    }
+    
+    .serv .info h4 {
+        font-size: 27px;
+    }
+    
+    .serv .info p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 30px auto 62px;
+    }
+    
+    .serv .last p {
+        margin-bottom: 0;
+    }
+    
+    /********* Start Team *******/
+    
+    .team .item {
+        width: 44%;
+        clear: both;
+        margin-right: 0;
+        height: 250px;
+        margin-left: 0;
+    }
+    
+    @media (max-width: 991px) and (min-width: 550px) {
+        .team .item {
+            width: 22%;
+            clear: both;
+            margin-right: 0;
+            height: 250px;
+            margin-left: 40px;
+        }
+    }
+    
+    .team .info {
+        height: 250px;
+        padding: 5px 37px;
+        width: 56%;
+    }
+    
+    .team .info a {
+        padding: 0 7px;
+        font-size: 12px;
+    }
+    
+    .team .info p {
+        font-size: 10px;
+        line-height: 1.5;
+        margin: auto -6px 6px;
+    }
+    
+    .team .info h4 {
+        font-size: 13px;
+        margin-bottom: 17px;
+    }
+    
+    .team .info-team h2 {
+        font-size: 22px;
+    }
+    
+    .team .info-team .social-media {
+        margin: 17px 0;
+    }
+    
+    .team q {
+        margin: 25px 0 50px;
+    }
+    
+    .team .card:hover p {
+        font-size: 12px;
+    }
+    
+    /********* Start Subscribe *******/
+    
+    .sub .info p {
+        margin-bottom: 44px;
+    }
+    
+    .sub .info input[type="submit"] {
+        font-size: 17px;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    
+    .sub .info input[type="email"] {
+        width: 220px;
+        height: 40px;
+    }
+    
+    /********* Start Work *******/
+    
+    .work {
+        padding: 70px 0;
+    }
+
+    .work .container {
+        padding: 0;
+    }
+    
+    .work .overlay-work h3 {
+        padding-top: 21%;
+    }
+    
+    .work .icons a {
+        width: 50px;
+        height: 50px;
+        left: 0;
+        font-size: 30px;
+        position: relative;
+        margin-top: 50px;
+        margin: auto;
+        display: block;
+    }
+    
+    .work .icons a i {
+        font-size: 18px;
+        line-height: 50px;
+    }
+    
+    /********* Start Clients *******/
+    
+    .client .title {
+        padding: 70px 0 30px;
+    }
+    
+    .client .carousel q {
+        letter-spacing: 0;
+        font-size: 14px;
+        margin: 10px;
+    }
+    
+    .owl-carousel .owl-item img {
+        padding: 30px 0;
+        width: auto;
+    }
+    
+    .client .carousel h2 {
+        font-size: 27px;
+    }
+    
+    /********* Start Contact *******/
+    
+    .contact .title img {
+        width: 133px;
+        margin-bottom: 40px;
+    }
+    
+    .contact form {
+        margin: 0 15px
+    }
+    
+    .contact input[type="text"], .contact input[type="email"] {
+        width: 100%;
+        margin: 30px 0 0px;
+    }
+    
+    .contact .message input[type="text"], .contact .message textarea {
+        width: 100%;
+        margin: 30px 0 0px;
+    }
+    
+    .contact .message input[type="submit"] {
+        width: 100%;
+        font-size: 17px;
+        margin: 40px 0 0;
+    }
+    
+    .contact form .fa-user {
+        top: 40px;
+        left: 13px;
+    }
+
+    .contact form .fa-envelope {
+        left: 13px;
+        top: 21.8%;
+        font-size: 16px;
+    }
+
+    .contact form .fa-pencil-square-o {
+        top: 35.7%;
+        left: 13px;
+    }
+
+    .contact form .fa-comment {
+        top: 48.7%;
+        left: 13px;
+    }
+    
+    /********* Start Footer *******/
+    
+    footer {
+        text-align: center;
+    }
+    
+    footer h2 {
+        margin: 20px;
+    }
+    
+    footer p {
+        padding-bottom: 30px;
+        margin-left: 20px;
+        font-size: 17px;
+    }
+
+   footer .social-media {
+       padding-bottom: 30px;
+  }
+    
+    footer .social-media a {
+        padding: 21px;
+    }
+    
+    footer h3 {
+        font-size: 30px;
+        margin-bottom: 25px;
+        margin-top: 40px;
+    }
+    
+    footer ul {
+        list-style: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    footer ul li {
+        padding: 6px 0;
+    }
+    
+    footer ul li a {
+        font-size: 17px;
+    }
+    
+    footer .conta li {
+        font-size: 17px;
+    }
+    
+    .copyright {
+        padding: 40px 0;
+        font-size: 10px;
+    }
+    
+}
+
+/* Medium Screen */
+@media(min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Larg Screen */
+@media(min-width: 1200px) {
+    
+}
+/* ------------------------- End Media Query ---------------------------------------- */		

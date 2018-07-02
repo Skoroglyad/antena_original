@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        
+        <!-- meta Data -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- title -->
+        <title>Lauria - One Page Responsive Template</title>
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        
+        <!-- Plugins -->
+        <link rel="stylesheet" href="css/lightbox.min.css" />
+        <link rel="stylesheet" href="css/owl.carousel.min.css" />
+        
+        <!-- google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i" />
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <script>
+            // Ajax function
+            
+            function _(id) {
+
+                return document.getElementById(id);
+
+            }
+
+            function submitForm() {
+
+                _("btn").disabled = true;
+                _("status").innerHTML = 'please wait ...';
+
+                var formdata = new FormData(),
+                    ajax = new XMLHttpRequest();
+
+                formdata.append("name", _("name").value);
+                formdata.append("email", _("email").value);
+                formdata.append("subj", _("subj").value);
+                formdata.append("msg", _("msg").value);
+
+                ajax.open("POST", "contact.php");
+                ajax.onreadystatechange = function () {
+
+                    if (ajax.readyState === 4 && ajax.status === 200) {
+
+                        if (ajax.responseText === "success") {
+
+                            _("my_form").innerHTML = '<h2>Thanks ' + _("name").value + ',<br> <br> your message has been sent.</h2>';
+
+                        } else {
+
+                            _("status").innerHTML = ajax.responseText;
+                            _("btn").disabled = false;
+
+                        }
+                    }
+                };
+
+                ajax.send(formdata);
+            }
+        </script>
+    </head>
+    <body>
+        
+        <!-- Start Navigation -->
+        
+        <section class="nav">
+             <div class="container">
+                <a href="#" class="nav-toggle-btn">
+                    <h3>☰ <span class="hidden-xs hidden-sm">Menu</span> </h3>
+                </a>
+                <nav class="menu">
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="#home" data-value="home">Accueil</a></li>
+                        <li><a href="#about" data-value="about">À propos</a></li>
+                        <li><a href="#serv" data-value="serv">Services</a></li>
+                        <li><a href="#team" data-value="team">Team</a></li>
+                        <li><a href="#work" data-value="work">Work</a></li>
+                        <li><a href="#contact" data-value="contact">Contact</a></li>
+                    </ul>
+                    <form>
+                        <input type="search" placeholder="Search ..." />
+                        <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://tumblr.com" target="_blank"><i class="fa fa-tumblr"></i></a>
+                        <a href="https://dribbble.com" target="_blank"><i class="fa fa-dribbble"></i></a>
+                    </form>
+                </nav>
+                <img class="logo" src="http://placehold.it/120x50" /> <!-- Here You Can Edit The Logo Of the template -->
+                <div class="left-nav">
+                    <a href="index_en.html">EN </a>
+                    <a href="index_fr.html">FR </a>
+                    <a href="index_ar.html">AR</a>
+                    <div class="hire hidden-xs hidden-sm">
+                        <a href="#contact">Hire Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Navigation -->
+        
+    <div class="content">
+        
+        <!-- Start Header -->
+        
+        <section id="home" class="header">
+            <div class="overlay-header"></div>
+            <div class="info">
+                <h1>Bienvenue à LAURIA</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt labore </p>
+                <a href="#work">Check It Out</a>
+            </div>
+            <div class="down">
+                <a href="#about">
+                    <i class="fa fa-angle-down one"></i>
+                    <i class="fa fa-angle-down two"></i>
+                    <i class="fa fa-angle-down three"></i>
+                </a>
+            </div>
+        </section>
+        
+        <!-- End Header -->
+        
+        <!-- Start About -->
+        
+        <section id="about" class="about">
+            <div class="container">
+            <q class="quote">The only way to do great work is to love what you do</q>
+            <h2 class="quote">- Steve Jobs</h2>
+            <div class="info">
+                <div class="bg-about"></div>
+                <div class="row">
+                    <div class="col-md-5 col-xs-12">
+                        <h2>Who We Are</h2>
+                        <img src="images/line.png" alt="Line" />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        <br>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                        <a href="#contact">Hire Us</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        <!-- End About -->
+        
+        <!-- Start Services -->
+        
+        <section id="serv" class="serv">
+            <div class="container">
+                <div class="title">
+                    <h2>What We Do</h2>
+                    <img src="images/line-light.png" alt="Line" />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-xs-12 info">
+                        <img src="images/icons/design.svg" alt="Design" />
+                        <h4>Graphic Design</h4>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
+                    </div>
+                    <div class="col-md-3 col-xs-12 info">
+                        <img src="images/icons/cogwheels.svg" alt="Design" />
+                        <h4>Development</h4>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
+                    </div>
+                    <div class="col-md-3 col-xs-12 info">
+                        <img src="images/icons/coding.svg" alt="Design" />
+                        <h4>Expert Coder</h4>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
+                    </div>
+                    <div class="col-md-3 col-xs-12 info">
+                        <img src="images/icons/support.svg" alt="Design" />
+                        <h4>24/7 Support</h4>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Services -->
+        
+        <!-- Start Team -->
+        
+        <section id="team" class="team">
+            <div class="container">
+                <div class="title text-center">
+                    <h2>Our Team</h2>
+                    <img src="images/line.png" alt="Line" />
+                </div>
+                <q class="quote">We are not a team because we work together we are a team because we respect trust and care for each other</q>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="team1">
+                            <div class="card">
+                                <img src="http://placehold.it/255x355" alt="Team1" class="responsive-img" /> <!-- Here You Can Edit Photo of Team --> 
+                                <div class="title-team">
+                                    <h3 class="color">John Doe</h3> <!-- Here You Can Edit Name of Team -->
+                                    <span>Photographer</span>
+                                    <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmo ut labore et magna aliqua.</p>
+                                </div>
+                                <div class="social-media">
+                                    <hr>
+                                    <hr>
+                                    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>
+                                    <a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="team2">
+                            <div class="card">
+                                <img src="http://placehold.it/255x355" alt="Team1" class="responsive-img" /> <!-- Here You Can Edit Photo of Team --> 
+                                <div class="title-team">
+                                    <h3 class="color">Steve Smith</h3> <!-- Here You Can Edit Name of Team -->
+                                    <span>Web Developer</span>
+                                    <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmo ut labore et magna aliqua.</p>
+                                </div>
+                                <div class="social-media">
+                                    <hr>
+                                    <hr>
+                                    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>
+                                    <a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="team3">
+                            <div class="card">
+                                <img src="http://placehold.it/255x355" alt="Team1" class="responsive-img" /> <!-- Here You Can Edit Photo of Team --> 
+                                <div class="title-team">
+                                    <h3 class="color">Matthew Dix</h3> <!-- Here You Can Edit Name of Team -->
+                                    <span>Web Designer</span>
+                                    <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmo ut labore et magna aliqua.</p>
+                                </div>
+                                <div class="social-media">
+                                    <hr>
+                                    <hr>
+                                    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>
+                                    <a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Team -->
+        
+        <!-- Star Subscribe -->
+        
+        <section class="sub text-center">
+            <div class="overlay-sub"></div>
+            <div class="container">
+                <div class="info">
+                    <h2>NewsLetter</h2>
+                    <p>Subscribe to our latest news to be updated, We don't like spam too!</p>
+                    <form>
+                        <input type="email" placeholder="Email Address"/>
+                        <input type="submit" value="subscribe" />
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Subscribe -->
+        
+        <!-- Star Work -->
+        
+        <section id="work" class="work">
+            <div class="container">
+                <div class="title text-center">
+                    <h2>Portfolio</h2>
+                    <img src="images/line.png" alt="Line" />
+                </div>
+                <q class="quote">Success is where preparation and opportunity meet</q>
+                <h3 class="quote mrg">- Bobby Unser</h3>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 scale">
+                        <img src="http://placehold.it/1000x800" alt="image1" /> 
+                        <div class="overlay-work">
+                            <h3>Project Title</h3>
+                            <div class="icons">
+                                <a href="http://placehold.it/1000x800" data-lightbox="roadtrip" data-title="Project Title 1"><i class="fa fa-arrows-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 scale">
+                        <img src="http://placehold.it/1000x800" alt="image1" /> 
+                        <div class="overlay-work">
+                            <h3>Project Title</h3>
+                            <div class="icons">
+                                <a href="http://placehold.it/1000x800" data-lightbox="roadtrip" data-title="Project Title 2"><i class="fa fa-arrows-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 scale">
+                        <img src="http://placehold.it/1000x800" alt="image1" /> 
+                        <div class="overlay-work">
+                            <h3>Project Title</h3>
+                            <div class="icons">
+                                <a href="http://placehold.it/1000x800" data-lightbox="roadtrip" data-title="Project Title 3"><i class="fa fa-arrows-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 scale">
+                        <img src="http://placehold.it/1000x800" alt="image1" /> 
+                        <div class="overlay-work">
+                            <h3>Project Title</h3>
+                            <div class="icons">
+                                <a href="http://placehold.it/1000x800" data-lightbox="roadtrip" data-title="Project Title 4"><i class="fa fa-arrows-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 scale">
+                        <img src="http://placehold.it/1000x800" alt="image1" /> 
+                        <div class="overlay-work">
+                            <h3>Project Title</h3>
+                            <div class="icons">
+                                <a href="http://placehold.it/1000x800" data-lightbox="roadtrip" data-title="Project Title 5"><i class="fa fa-arrows-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 scale">
+                        <img src="http://placehold.it/1000x800" alt="image1" /> 
+                        <div class="overlay-work">
+                            <h3>Project Title</h3>
+                            <div class="icons">
+                                <a href="http://placehold.it/1000x800" data-lightbox="roadtrip" data-title="Project Title 6"><i class="fa fa-arrows-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Work -->
+        
+        <!-- Start Clients -->
+        
+        <section class="client text-center">
+            <div class="overlay-client"></div>
+            <div class="title">
+                <h2>What They Say</h2>
+                <img src="images/line-light.png" alt="Line" />
+            </div>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <i class="fa fa-quote-left"></i>
+                        <q>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere  possimus, omnis voluptas assumenda est omnis dolor repellendus.</q>
+                        <h2>John Doe</h2>
+                        <span>Lead Marketing Team</span>
+                    </div>
+                    <div class="item">
+                        <i class="fa fa-quote-left"></i>
+                        <q>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere  possimus, omnis voluptas assumenda est omnis dolor repellendus.</q>
+                        <h2>Mark Anthony</h2>
+                        <span>Lead Marketing Team</span>
+                    </div>
+                    <div class="item">
+                        <i class="fa fa-quote-left"></i>
+                        <q>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere  possimus, omnis voluptas assumenda est omnis dolor repellendus.</q>
+                        <h2>Julia Smith</h2>
+                        <span>Lead Marketing Team</span>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel owl-theme">
+                <div><img src="http://placehold.it/209x86" alt="Client1" /></div>
+                <div><img src="http://placehold.it/209x86" alt="Client2" /></div>
+                <div><img src="http://placehold.it/209x86" alt="Client3" /></div>
+                <div><img src="http://placehold.it/209x86" alt="Client4" /></div>
+            </div>
+        </section>
+        
+        <!-- End Clients -->
+        
+        <!-- Start Contact -->
+        
+        <section id="contact" class="contact text-center">
+            <div class="title">
+                <h2>Get In Touch</h2>
+                <img src="images/line.png" alt="Line" />
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <form id="my_form" method="post" onsubmit="submitForm(); return false;">
+                        <i class="fa fa-user"></i><input id="name" type="text" name="name" placeholder="Name" required/>
+                        <i class="fa fa-envelope"></i><input id="email" type="email" name="email" placeholder="Mail" required/>
+                        <div class="message">
+                            <i class="fa fa-pencil-square-o"></i><input id="subj" type="text" name="subject" placeholder="Subject" required/>
+                            <i class="fa fa-comment"></i><textarea id="msg" placeholder="Message" required></textarea>
+                            <p><input id="btn" type="submit" value="SEND" /><span id="status"></span></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-sm-12 hidden-sm hidden-xs maps" id="overlay">
+                    <div class="google-wrapper">
+                        <div id="google-map"> <!-- Your Can Add Your Location Just Go To Google Map And Emped Map -->
+                            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162778.81964475298!2d-73.93891815355539!3d40.703660465248056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2s!4v1491335061565"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Contact -->
+        
+        <!-- Start Footer -->
+        
+        <footer>
+            <div class="overlay-footer"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                    <img class="logo" src="http://placehold.it/120x50" /> <!-- Here You Can Edit The Logo Of the template -->
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus</p>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil </p>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                            <a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home" data-value="home">Home</a></li>
+                            <li><a href="#about" data-value="about">À propos</a></li>
+                            <li><a href="#serv" data-value="serv">Services</a></li>
+                            <li><a href="#team" data-value="team">Team</a></li>
+                            <li><a href="#work" data-value="work">Work</a></li>
+                            <li><a href="#contact" data-value="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <h3>Contacts</h3>
+                        <ul class="list-unstyled conta">
+                            <li>Address : 123 Street Name, City Branford, 32008</li>
+                            <li>Phone : + (123) 456-789</li>
+                            <li>Fix :  +(789) 456-123</li>
+                            <li>Email : support@company.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- End Footer -->
+        
+        <!-- Start CopyRight -->
+        
+        <div class="copyright">
+            <span>&copy; Copyright 2017. All Right Reserved By Bouthaina</span>
+        </div>
+        
+        <!-- End CopyRight -->
+        
+        <!-- Start SrollTop -->
+        
+        <section class="scrolltop">
+            <i class="fa fa-angle-double-up"></i>
+        </section>
+        
+        <!-- End SrollTop -->
+        
+    </div>
+        
+        <!-- Start Loading -->
+        
+        <section class="loading-overlay">
+            <div class="cssload-loader">
+                <div class="cssload-inner cssload-one"></div>
+                <div class="cssload-inner cssload-two"></div>
+                <div class="cssload-inner cssload-three"></div>
+            </div>
+        </section>
+        
+        <!-- End Loading -->
+        
+        
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
